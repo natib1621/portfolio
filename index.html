@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Natnael Bekele – Data Science Student at Debre Birhan University. Machine Learning, Deep Learning, AI enthusiast." />
+  <title>Natnael Bekele | Data Science Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">NB<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"     class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#about"    class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#skills"   class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#contact"  class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO / HOME ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Natnael Bekele</h1>
+        <div class="hero-title-wrapper">
+          <span class="hero-title-static">I'm a </span>
+          <span class="hero-title-dynamic" id="dynamic-title"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-description">
+          4th Year Data Science student at Debre Birhan University, passionate about
+          Machine Learning, Deep Learning, and turning data into meaningful insights
+          that solve real-world problems.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-projects-btn">View My Work</a>
+          <a href="#contact"  class="btn btn-outline" id="hero-contact-btn">Get In Touch</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-link" id="social-github" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" id="social-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:natnaelbekele6639@gmail.com" class="social-link" id="social-email" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <img src="image/natnael.jpg" alt="Natnael Bekele - Profile Picture" class="hero-image" id="profile-img" />
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Open to opportunities</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Who Am I</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="card-icon">🎓</div>
+          <h3>Education</h3>
+          <p>4th Year B.Sc. in <strong>Data Science</strong> at <strong>Debre Birhan University</strong>, Ethiopia. Gaining deep theoretical and practical knowledge in data analysis, machine learning, and AI systems.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="card-icon">🤖</div>
+          <h3>Specialization</h3>
+          <p>Focused on <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, Natural Language Processing, Computer Vision, and Statistical Data Analysis. Passionate about building intelligent systems from real-world data.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="card-icon">🌍</div>
+          <h3>Interests</h3>
+          <p>Fascinated by how AI can solve Ethiopia's and Africa's challenges — from agriculture to healthcare. Also interested in data visualization, open-source collaboration, and continuous self-improvement.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="card-icon">🎯</div>
+          <h3>Goals</h3>
+          <p>Aspiring to build AI-powered applications that create real impact in my community. Looking to collaborate on data science projects, contribute to research, and grow into a world-class ML engineer.</p>
+        </div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-item">
+          <span class="stat-number" data-target="4">0</span><span class="stat-plus">th</span>
+          <span class="stat-label">Year Student</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Courses Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">ML Models Trained</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I Know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="skills-categories reveal">
+        <button class="skill-tab active" id="tab-ml"   data-tab="ml">Machine Learning</button>
+        <button class="skill-tab"        id="tab-prog" data-tab="prog">Programming</button>
+        <button class="skill-tab"        id="tab-tools" data-tab="tools">Tools & Libraries</button>
+      </div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card reveal" id="project-card-1">
+          <div class="project-card-top">
+            <div class="project-number">01</div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Pandas</span>
+            </div>
+          </div>
+          <div class="project-icon-wrap">🌾</div>
+          <h3 class="project-title">Crop Disease Classifier</h3>
+          <p class="project-desc">A machine learning model that classifies crop diseases from leaf images using Convolutional Neural Networks. Trained on a dataset of 5,000+ images to help Ethiopian farmers detect plant diseases early and reduce crop loss.</p>
+          <div class="project-card-footer">
+            <a href="project/project1.html" class="btn btn-sm btn-primary" id="project1-details-btn">View Details →</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" id="project1-code-btn">Source Code</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" id="project-card-2">
+          <div class="project-card-top">
+            <div class="project-number">02</div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">NLP</span>
+            </div>
+          </div>
+          <div class="project-icon-wrap">💬</div>
+          <h3 class="project-title">Amharic Sentiment Analyzer</h3>
+          <p class="project-desc">An NLP model that analyzes sentiment in Amharic text (positive, negative, neutral) using deep learning. Useful for understanding public opinion on social media in the Ethiopian context using LSTM networks.</p>
+          <div class="project-card-footer">
+            <a href="project/project2.html" class="btn btn-sm btn-primary" id="project2-details-btn">View Details →</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" id="project2-code-btn">Source Code</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" id="project-card-3">
+          <div class="project-card-top">
+            <div class="project-number">03</div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Seaborn</span>
+            </div>
+          </div>
+          <div class="project-icon-wrap">📊</div>
+          <h3 class="project-title">Student Performance Analysis</h3>
+          <p class="project-desc">An exploratory data analysis (EDA) project analyzing student academic performance data to find patterns, predict at-risk students, and recommend interventions using statistical analysis and visualization.</p>
+          <div class="project-card-footer">
+            <a href="#" class="btn btn-sm btn-primary" id="project3-details-btn">View Details →</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Source Code</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Say Hello</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info reveal">
+          <h3>Let's connect!</h3>
+          <p>I'm always excited to discuss data science, collaborate on ML projects, or just have a conversation about technology and AI. Feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📧</div>
+              <div>
+                <span class="contact-detail-label">Email</span>
+                <span class="contact-detail-value">natnaelbekele6639@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <span class="contact-detail-label">Location</span>
+                <span class="contact-detail-value">Debre Birhan, Ethiopia</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">🎓</div>
+              <div>
+                <span class="contact-detail-label">University</span>
+                <span class="contact-detail-value">Debre Birhan University</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Jane Doe" autocomplete="name" required />
+            <span class="form-error" id="error-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Your Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="natnaelbekele6639@gmail.com" autocomplete="email" required />
+            <span class="form-error" id="error-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject" placeholder="Project Collaboration / Data Science discussion" />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+            <span class="form-error" id="error-message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span id="btn-text">Send Message</span>
+            <span id="btn-loader" class="hidden">Sending…</span>
+          </button>
+          <div class="form-success hidden" id="form-success">
+            <span>🎉</span> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-logo">NB<span class="dot">.</span></p>
+        <p class="footer-copy">© 2026 Natnael Bekele · Data Science Student @ Debre Birhan University</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
