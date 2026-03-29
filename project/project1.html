@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crop Disease Classifier – ML Project by Natnael Bekele." />
+  <title>Crop Disease Classifier | Natnael Bekele</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html#home" class="nav-logo">NB<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#home"     class="nav-link">Home</a></li>
+        <li><a href="../index.html#about"    class="nav-link">About</a></li>
+        <li><a href="../index.html#skills"   class="nav-link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="project-page-hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1;width:100%;padding-block:4rem">
+      <a href="../index.html#projects" class="btn btn-ghost btn-sm" style="margin-bottom:2rem;display:inline-flex">← Back to Projects</a>
+      <div class="project-detail-badge">
+        <span class="tag">Python</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Keras</span>
+        <span class="tag">CNN</span>
+        <span class="tag">OpenCV</span>
+      </div>
+      <h1 class="hero-name" style="font-size:clamp(2.2rem,5vw,3.8rem)">🌾 Crop Disease Classifier</h1>
+      <p style="color:var(--clr-muted);max-width:560px;font-size:1.05rem;line-height:1.8;margin-top:1rem">
+        A Convolutional Neural Network (CNN) model that classifies crop leaf diseases
+        from images — helping Ethiopian farmers detect plant diseases early and protect their harvest.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-page-content">
+    <div class="container">
+      <div class="project-page-grid">
+        <div>
+          <h2 class="section-title" style="font-size:1.6rem;margin-bottom:1rem">Project Overview</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">
+            Agriculture is a cornerstone of Ethiopia's economy, yet crop diseases cause
+            significant losses every year. This project uses Deep Learning — specifically
+            Convolutional Neural Networks — to automatically classify crop leaf diseases
+            from photos taken on a smartphone, providing an accessible, low-cost diagnostic tool
+            for smallholder farmers.
+          </p>
+          <p style="color:var(--clr-muted);line-height:1.8">
+            The model was trained on a dataset of 5,000+ labeled leaf images across multiple
+            crop types (maize, tomato, wheat) and disease categories, achieving over 91% accuracy
+            on the validation set.
+          </p>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">Key Features</h2>
+          <ul class="feature-list">
+            <li>CNN architecture (ResNet50 transfer learning) fine-tuned on crop leaf dataset</li>
+            <li>Image preprocessing pipeline with data augmentation to prevent overfitting</li>
+            <li>Classifies 10 disease categories across 3 major crop types</li>
+            <li>Achieves 91%+ accuracy on the test dataset</li>
+            <li>Simple web interface for uploading a photo and getting instant diagnosis</li>
+            <li>Grad-CAM visualization to explain which leaf regions triggered the decision</li>
+            <li>Lightweight model exported for mobile deployment</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">What I Learned</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1rem">
+            This project deepened my understanding of transfer learning, CNN architectures,
+            data augmentation techniques, and deploying ML models. I also gained experience
+            with TensorFlow/Keras, OpenCV for image preprocessing, and creating explainable AI
+            with Grad-CAM. Most importantly, I learned how to frame a real-world problem as
+            a machine learning task.
+          </p>
+
+          <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub →</a>
+            <a href="#" class="btn btn-outline">Live Demo</a>
+          </div>
+        </div>
+
+        <aside class="project-sidebar-card">
+          <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:.5rem">Project Info</h3>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Status</span>
+            <span class="sidebar-value" style="color:#10b981">✅ Completed</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Type</span>
+            <span class="sidebar-value">Image Classification (CNN)</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Accuracy</span>
+            <span class="sidebar-value" style="color:var(--clr-accent2)">91.4% on test set</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Dataset</span>
+            <span class="sidebar-value">5,000+ leaf images</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Stack</span>
+            <span class="sidebar-value">Python · TensorFlow · OpenCV</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Duration</span>
+            <span class="sidebar-value">2 Months</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Year</span>
+            <span class="sidebar-value">2025</span>
+          </div>
+          <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem">
+            <a href="https://github.com" class="btn btn-primary btn-full">GitHub Repo</a>
+            <a href="../index.html#projects" class="btn btn-ghost btn-full">← All Projects</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-logo">NB<span class="dot">.</span></p>
+        <p class="footer-copy">© 2026 Natnael Bekele · Data Science Student @ Debre Birhan University</p>
+        <div class="footer-links">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger?.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
