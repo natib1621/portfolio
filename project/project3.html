@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ErosionNet – Deep Learning Soil Erosion Prediction Project by Natnael Bekele. RUSLE-integrated neural network for Ethiopia." />
+  <title>ErosionNet – Soil Erosion Prediction | Natnael Bekele</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html#home" class="nav-logo">NB<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#home"     class="nav-link">Home</a></li>
+        <li><a href="../index.html#about"    class="nav-link">About</a></li>
+        <li><a href="../index.html#skills"   class="nav-link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="project-page-hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1;width:100%;padding-block:4rem">
+      <a href="../index.html#projects" class="btn btn-ghost btn-sm" style="margin-bottom:2rem;display:inline-flex">&#8592; Back to Projects</a>
+      <div class="project-detail-badge">
+        <span class="tag">Python</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">RUSLE</span>
+        <span class="tag">Neural Network</span>
+        <span class="tag">Pandas</span>
+      </div>
+      <h1 class="hero-name" style="font-size:clamp(1.8rem,4.5vw,3.2rem)">&#127757; ErosionNet – Soil Erosion Risk Prediction Using Deep Learning</h1>
+      <p style="color:var(--clr-muted);max-width:640px;font-size:1.05rem;line-height:1.8;margin-top:1rem">
+        A deep learning project that integrates RUSLE (Revised Universal Soil Loss Equation)
+        with a feedforward neural network to predict and classify soil erosion risk across
+        Ethiopian Woredas — achieving 96.21% validation accuracy.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-page-content">
+    <div class="container">
+      <div class="project-page-grid">
+        <div>
+          <h2 class="section-title" style="font-size:1.6rem;margin-bottom:1rem">Project Overview</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">
+            Soil erosion costs Ethiopia an estimated 1.5 billion dollars annually, representing
+            a 2–3% loss in GDP. Traditional empirical approaches like RUSLE are data-intensive
+            and cannot scale for real-time, large-area monitoring. This project combines RUSLE-based
+            target generation with a custom deep learning model (ErosionNet) to automate and
+            improve erosion risk classification across Ethiopia's Woredas.
+          </p>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">
+            The dataset — <strong>Merged Woredas 75k.xlsx</strong> — contains 75,000 observations
+            from five Woredas in the Amhara Region, North Showa Zone: Ankober, Menz, Merhabete,
+            Minjar, and Kewet. It includes 18 terrain, climatic, and land-use features. Four
+            Woredas (60,000 records) were used for training/validation and Kewet was reserved
+            as the held-out test set.
+          </p>
+          <p style="color:var(--clr-muted);line-height:1.8">
+            This project is the <strong>first of its kind in Ethiopia</strong> to integrate
+            a RUSLE-based equation with a deep neural network for soil erosion prediction,
+            including a real-time satellite dashboard built in Jupyter Notebook.
+          </p>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128302; Methodology</h2>
+          <ul class="feature-list">
+            <li><strong>Data Preprocessing:</strong> KNN imputation for terrain features, median imputation for drainage density, one-hot encoding for categoricals, and feature scaling</li>
+            <li><strong>RUSLE Factor Computation:</strong> A = R &times; K &times; LS &times; C &times; P — Rainfall erosivity (Hurni 1985), soil erodibility from soil types, LS from slope-length approximations, C from NDVI, P from land-use categories</li>
+            <li><strong>Feature Selection:</strong> Pearson correlation, Variance Inflation Factor (VIF), and mutual information to eliminate collinear features; slope and rainfall identified as most important</li>
+            <li><strong>ErosionNet (PyTorch):</strong> Feedforward network with 2 hidden layers, batch normalization, ReLU activation, dropout, Adam optimizer, cross-entropy loss, and class weighting for imbalanced data</li>
+            <li><strong>Erosion Classes:</strong> Low, Moderate, and High erosion risk</li>
+            <li><strong>Evaluation:</strong> Confusion matrix, validation accuracy, and generalization to held-out Kewet Woreda test set</li>
+            <li><strong>Dashboard:</strong> Real-time satellite data integration with AI output compared to RUSLE values in a Jupyter Notebook dashboard</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#127941; Results</h2>
+          <ul class="feature-list">
+            <li>Validation accuracy: <strong>96.21%</strong></li>
+            <li>Strong performance on the high-risk erosion class</li>
+            <li>Good generalization to the unseen Kewet Woreda test dataset</li>
+            <li>Slope and rainfall identified as the most important erosion-driving features</li>
+            <li>Successfully integrated real-time satellite data for live monitoring dashboard</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128161; What I Learned</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1rem">
+            This project gave me deep hands-on experience with PyTorch for building custom
+            neural networks, handling class imbalance with class weighting and synthetic data,
+            applying physics-based equations (RUSLE) as feature engineering, and evaluating
+            model performance with confusion matrices. I also gained experience in feature
+            selection using statistical methods (VIF, mutual information) and integrating
+            AI outputs with real-world environmental data for a live monitoring dashboard.
+          </p>
+
+          <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
+            <a href="https://github.com/natib1621/ErosionNet-Soil-Erosion-Risk-Prediction-Using-Deep-Learning" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub &#8594;</a>
+            <a href="../index.html#projects" class="btn btn-outline">&#8592; All Projects</a>
+          </div>
+        </div>
+
+        <aside class="project-sidebar-card">
+          <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:.5rem">Project Info</h3>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Type</span>
+            <span class="sidebar-value">Deep Learning Project</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Status</span>
+            <span class="sidebar-value" style="color:#10b981">&#10003; Completed</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Accuracy</span>
+            <span class="sidebar-value" style="color:var(--clr-accent2)">96.21% Validation</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Dataset</span>
+            <span class="sidebar-value">75,000 observations (5 Woredas)</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Study Area</span>
+            <span class="sidebar-value">Amhara Region, North Showa, Ethiopia</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Model</span>
+            <span class="sidebar-value">ErosionNet (Feedforward DNN)</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Framework</span>
+            <span class="sidebar-value">PyTorch</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Stack</span>
+            <span class="sidebar-value">Python &middot; PyTorch &middot; Pandas &middot; Scikit-learn</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Features</span>
+            <span class="sidebar-value">18 terrain, climatic &amp; land-use variables</span>
+          </div>
+          <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem">
+            <a href="https://github.com/natib1621/ErosionNet-Soil-Erosion-Risk-Prediction-Using-Deep-Learning" target="_blank" rel="noopener" class="btn btn-primary btn-full">GitHub Repo</a>
+            <a href="../index.html#projects" class="btn btn-ghost btn-full">&#8592; All Projects</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-logo">NB<span class="dot">.</span></p>
+        <p class="footer-copy">&#169; 2026 Natnael Bekele &middot; Data Science Student @ Debre Birhan University</p>
+        <div class="footer-links">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger?.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

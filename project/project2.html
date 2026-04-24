@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="End-to-End Modern Data Engineering Pipeline – PySpark, DuckDB, Power BI project by Natnael Bekele." />
+  <title>Data Engineering Pipeline | Natnael Bekele</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html#home" class="nav-logo">NB<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#home"     class="nav-link">Home</a></li>
+        <li><a href="../index.html#about"    class="nav-link">About</a></li>
+        <li><a href="../index.html#skills"   class="nav-link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="project-page-hero">
+    <div class="hero-bg">
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1;width:100%;padding-block:4rem">
+      <a href="../index.html#projects" class="btn btn-ghost btn-sm" style="margin-bottom:2rem;display:inline-flex">&#8592; Back to Projects</a>
+      <div class="project-detail-badge">
+        <span class="tag">Python</span>
+        <span class="tag">PySpark</span>
+        <span class="tag">DuckDB</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Prefect</span>
+        <span class="tag">ETL</span>
+        <span class="tag">dbt</span>
+      </div>
+      <h1 class="hero-name" style="font-size:clamp(1.8rem,4.5vw,3.2rem)">&#128202; End-to-End Modern Data Engineering Pipeline</h1>
+      <p style="color:var(--clr-muted);max-width:640px;font-size:1.05rem;line-height:1.8;margin-top:1rem">
+        A scalable, resilient ETL pipeline that processes large-scale global internet
+        performance data using Apache PySpark, DuckDB, and Prefect — delivering analytics
+        and Power BI dashboards to uncover the global Digital Divide.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-page-content">
+    <div class="container">
+      <div class="project-page-grid">
+        <div>
+          <h2 class="section-title" style="font-size:1.6rem;margin-bottom:1rem">Project Overview</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">
+            This project designs and implements a scalable, resilient ETL (Extract, Transform, Load)
+            data pipeline that processes large-scale global internet performance data and prepares it
+            for advanced analytics and business intelligence reporting.
+          </p>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">
+            Using <strong>Apache PySpark</strong> for distributed processing, <strong>DuckDB</strong>
+            for high-performance analytical querying, and <strong>Prefect</strong> for workflow
+            orchestration, the pipeline integrates heterogeneous data sources to generate actionable
+            insights into the global Digital Divide.
+          </p>
+          <p style="color:var(--clr-muted);line-height:1.8">
+            The final curated dataset is visualized using <strong>Microsoft Power BI</strong>
+            to support data-driven decision-making related to internet infrastructure development
+            and digital equity.
+          </p>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#127919; Business Problem</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1rem">
+            Reliable internet connectivity is a major driver of economic growth, education, and innovation.
+            However, internet performance varies significantly across regions and countries. This project
+            answers key analytical questions:
+          </p>
+          <ul class="feature-list">
+            <li><strong>Global Disparity:</strong> Which countries have the fastest and slowest internet infrastructure?</li>
+            <li><strong>Population Impact:</strong> How does population size correlate with internet speed and latency?</li>
+            <li><strong>Infrastructure Quality:</strong> What proportion of the global population experiences excellent vs. poor connectivity?</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128302; ETL Pipeline Architecture</h2>
+          <ul class="feature-list">
+            <li><strong>Extract:</strong> Parallel download of Parquet, GeoJSON, and CSV datasets using <code>prefect.submit()</code> with hash-based smart caching to prevent redundant downloads</li>
+            <li><strong>Transform (PySpark):</strong> Data cleaning (missing latency values filled with global averages), speed conversion from Kbps to Mbps, country mapping via Ookla quadkeys, population data join, and <strong>Performance_Grade</strong> feature engineering (Excellent / Very Good / Good / Average / Poor)</li>
+            <li><strong>Load:</strong> Staged to Parquet for scalability, loaded into DuckDB via <code>read_parquet</code>, and exported as CSV for Power BI</li>
+            <li><strong>Orchestration (Prefect):</strong> Task-level fault tolerance, parallel execution, automatic retries, 24-hour task caching, and daily cron-based scheduling</li>
+            <li><strong>dbt Project:</strong> Data transformation and modelling layer for analytics-ready tables</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128736; Technical Highlights</h2>
+          <ul class="feature-list">
+            <li><strong>Highly Scalable:</strong> Processes millions of records using distributed Spark execution</li>
+            <li><strong>Fault Tolerant:</strong> Task retries, caching, and error handling via Prefect</li>
+            <li><strong>Performance Optimized:</strong> Columnar storage (Parquet) + DuckDB analytical query engine</li>
+            <li><strong>Cross-Platform:</strong> Windows-compatible Hadoop configuration (winutils.exe) included</li>
+            <li><strong>Languages:</strong> Jupyter Notebook (94.1%) + Python (5.9%)</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128161; What I Learned</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1rem">
+            This project gave me hands-on experience with building production-grade data engineering
+            pipelines from scratch. I deepened my skills in distributed data processing with PySpark,
+            high-performance analytics with DuckDB, workflow orchestration with Prefect, and data
+            modelling with dbt. I also gained experience in designing fault-tolerant, scalable
+            systems and creating Power BI dashboards for data-driven storytelling.
+          </p>
+
+          <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
+            <a href="https://github.com/natib1621/End-to-End-Modern-data-Engineering-pipeline-Pyspark-DuckDB-Power-BI" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub &#8594;</a>
+            <a href="../index.html#projects" class="btn btn-outline">&#8592; All Projects</a>
+          </div>
+        </div>
+
+        <aside class="project-sidebar-card">
+          <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:.5rem">Project Info</h3>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Type</span>
+            <span class="sidebar-value">Data Engineering</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Status</span>
+            <span class="sidebar-value" style="color:#10b981">&#10003; Completed</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Pipeline</span>
+            <span class="sidebar-value">End-to-End ETL</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Processing</span>
+            <span class="sidebar-value" style="color:var(--clr-accent2)">Distributed (PySpark)</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Orchestration</span>
+            <span class="sidebar-value">Prefect (Daily Cron)</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Warehouse</span>
+            <span class="sidebar-value">DuckDB + Parquet</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">BI Tool</span>
+            <span class="sidebar-value">Microsoft Power BI</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Stack</span>
+            <span class="sidebar-value">Python &middot; PySpark &middot; DuckDB &middot; Prefect &middot; dbt</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Commits</span>
+            <span class="sidebar-value">27 commits on GitHub</span>
+          </div>
+          <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem">
+            <a href="https://github.com/natib1621/End-to-End-Modern-data-Engineering-pipeline-Pyspark-DuckDB-Power-BI" target="_blank" rel="noopener" class="btn btn-primary btn-full">GitHub Repo</a>
+            <a href="../index.html#projects" class="btn btn-ghost btn-full">&#8592; All Projects</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-logo">NB<span class="dot">.</span></p>
+        <p class="footer-copy">&#169; 2026 Natnael Bekele &middot; Data Science Student @ Debre Birhan University</p>
+        <div class="footer-links">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger?.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

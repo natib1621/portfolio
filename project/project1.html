@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Geospatial Land Cover Classification & Temperature Change Detection – Internship ML Project by Natnael Bekele." />
+  <title>Geospatial ML Analysis | Natnael Bekele</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html#home" class="nav-logo">NB<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#home"     class="nav-link">Home</a></li>
+        <li><a href="../index.html#about"    class="nav-link">About</a></li>
+        <li><a href="../index.html#skills"   class="nav-link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="project-page-hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1;width:100%;padding-block:4rem">
+      <a href="../index.html#projects" class="btn btn-ghost btn-sm" style="margin-bottom:2rem;display:inline-flex">&#8592; Back to Projects</a>
+      <div class="project-detail-badge">
+        <span class="tag">Python</span>
+        <span class="tag">Scikit-learn</span>
+        <span class="tag">K-Means</span>
+        <span class="tag">Random Forest</span>
+        <span class="tag">XGBoost</span>
+        <span class="tag">Geospatial</span>
+        <span class="tag">Jupyter Notebook</span>
+      </div>
+      <h1 class="hero-name" style="font-size:clamp(1.8rem,4.5vw,3.2rem)">&#128752; Geospatial Land Cover Classification &amp; Temperature Change Detection</h1>
+      <p style="color:var(--clr-muted);max-width:620px;font-size:1.05rem;line-height:1.8;margin-top:1rem">
+        An internship machine learning project that analyzes satellite raster data of Addis Ababa
+        across three years (2000, 2015 &amp; 2025) to detect temperature change trends and classify
+        land cover using both supervised and unsupervised ML techniques.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-page-content">
+    <div class="container">
+      <div class="project-page-grid">
+        <div>
+          <h2 class="section-title" style="font-size:1.6rem;margin-bottom:1rem">Project Overview</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">
+            Geospatial data provides valuable insights into Earth's physical and environmental
+            conditions. This internship project applies machine learning techniques to analyze
+            multi-temporal satellite raster datasets of Addis Ababa, Ethiopia, spanning the years
+            2000, 2015, and 2025.
+          </p>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">
+            The project is divided into two complementary workflows:
+            an <strong>Unsupervised Notebook</strong> for temperature change analysis
+            using K-Means clustering, and a <strong>Supervised Notebook</strong> for
+            land cover classification using Random Forest and XGBoost trained on labeled shapefiles.
+          </p>
+          <p style="color:var(--clr-muted);line-height:1.8">
+            Outputs include land cover maps showing how Addis Ababa's landscape has changed over
+            25 years — with clear evidence of urban expansion, deforestation, and rising surface
+            temperatures — providing actionable data for policymakers, urban planners, and
+            environmental agencies.
+          </p>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128302; Methodology</h2>
+          <ul class="feature-list">
+            <li><strong>Data:</strong> Satellite raster imagery (Landsat/Sentinel) for Addis Ababa — 2000, 2015 &amp; 2025</li>
+            <li><strong>Preprocessing:</strong> Raster data alignment, normalization, and band extraction</li>
+            <li><strong>Unsupervised (K-Means Clustering):</strong> Grouped raster pixels to detect surface temperature anomalies and thermal trends over time</li>
+            <li><strong>Supervised (Random Forest &amp; XGBoost):</strong> Extracted raster values using training shapefiles, then trained ensemble models for multi-class land cover mapping</li>
+            <li><strong>Output:</strong> Land cover classification maps for 2000, 2015, and 2025 highlighting urban growth, vegetation loss, and barren land expansion</li>
+            <li><strong>Tools:</strong> Python, Jupyter Notebook, Scikit-learn, XGBoost, Geopandas, Rasterio, Matplotlib</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128203; Key Objectives</h2>
+          <ul class="feature-list">
+            <li>Preprocess raster data for both land cover and temperature analysis</li>
+            <li>Implement unsupervised K-Means clustering to generate temperature change maps</li>
+            <li>Implement supervised Random Forest / XGBoost for multi-class land cover mapping</li>
+            <li>Compare the effectiveness of supervised vs. unsupervised approaches on geospatial raster data</li>
+            <li>Assess temperature change trends and land cover transitions from 2000 to 2025</li>
+          </ul>
+
+          <h2 class="section-title" style="font-size:1.4rem;margin-block:2rem 0.5rem">&#128161; What I Learned</h2>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1rem">
+            This internship project gave me hands-on experience with geospatial data analysis,
+            raster preprocessing, and applying both supervised and unsupervised ML to real-world
+            environmental datasets. I deepened my knowledge of Random Forest and XGBoost for
+            classification, K-Means for clustering, and how to interpret and visualize land cover
+            maps. I also gained valuable experience working in a structured, multi-chapter
+            research document format typical of professional internship reporting.
+          </p>
+
+          <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
+            <a href="https://github.com/natib1621/Geospatial-Land-Cover-Classification-Temperature-Change-Detection" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub &#8594;</a>
+            <a href="../index.html#projects" class="btn btn-outline">&#8592; All Projects</a>
+          </div>
+        </div>
+
+        <aside class="project-sidebar-card">
+          <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:.5rem">Project Info</h3>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Type</span>
+            <span class="sidebar-value">Internship Project</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Status</span>
+            <span class="sidebar-value" style="color:#10b981">&#10003; Completed</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Study Area</span>
+            <span class="sidebar-value">Addis Ababa, Ethiopia</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Years Analyzed</span>
+            <span class="sidebar-value" style="color:var(--clr-accent2)">2000 &middot; 2015 &middot; 2025</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">ML Methods</span>
+            <span class="sidebar-value">K-Means, Random Forest, XGBoost</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Data Type</span>
+            <span class="sidebar-value">Satellite Raster (GeoTIFF) + Shapefiles</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Stack</span>
+            <span class="sidebar-value">Python &middot; Scikit-learn &middot; Rasterio &middot; Geopandas</span>
+          </div>
+          <div class="sidebar-info-item">
+            <span class="sidebar-label">Output</span>
+            <span class="sidebar-value">Land Cover Maps (3 time periods)</span>
+          </div>
+          <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem">
+            <a href="https://github.com/natib1621/Geospatial-Land-Cover-Classification-Temperature-Change-Detection" target="_blank" rel="noopener" class="btn btn-primary btn-full">GitHub Repo</a>
+            <a href="../index.html#projects" class="btn btn-ghost btn-full">&#8592; All Projects</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-logo">NB<span class="dot">.</span></p>
+        <p class="footer-copy">&#169; 2026 Natnael Bekele &middot; Data Science Student @ Debre Birhan University</p>
+        <div class="footer-links">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger?.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
